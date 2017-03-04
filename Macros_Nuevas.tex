@@ -16,6 +16,8 @@
 
 % TABLEOFCONTENT
 \makeatletter
+\def\l@subsubsection{\@tocline{1}{0,2pt}{2pc}{8mm}{\ \ }}
+\makeatletter
 \def\l@subsection{\@tocline{1}{0,2pt}{2pc}{8mm}{\ \ }}
 \makeatletter
 \def\l@section{\@tocline{1}{0,2pt}{2pc}{8mm}{\ \ }}
@@ -60,6 +62,10 @@
 % DEFINIMOS LAS SUBSECCIONES
 \titleformat{\subsection}[block]{\normalfont\large}{\thesubsection}{.5em}{\bfseries}
 \titlespacing*{\subsection}{0pt}{*4}{*1}
+
+% DEFINIMOS LAS SUBSUBSECCIONES
+\titleformat{\subsubsection}[block]{\normalfont\large}{\thesubsubsection}{.5em}{\itshape}
+\titlespacing*{\subsubsection}{0pt}{*4}{*1}
 
 % DEFINIMOS EL ABSTRACT
 \newenvironment{sumario}[1][\unskip]
