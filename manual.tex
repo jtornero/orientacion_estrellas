@@ -1,26 +1,25 @@
-\documentclass[12pt]{memoir}
-\usepackage[spanish]{babel}
-%\usepackage{geometry}
-%\geometry{a4paper, margin=0.7in}
-%\usepackage[final,1to1]{booklet}
+\documentclass[11pt,a5paper,twoside]{amsbook}
 % \usepackage{doclicense}
 \usepackage[utf8]{inputenc}
-\usepackage{baskervald}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{commath}
+%\usepackage[T1]{fontenc}
 
-%opening
+
+\input{Macros_Nuevas.tex}
+
 \title{Orientarse de noche}
+\date{Marzo de 2.017}
 
 \begin{document}
+\titulo
 
-\maketitle
-% 
-\begin{abstract}
+\tableofcontents
+
+\cleardoublepage
+
+\chapter*{Orientarse de noche}
+\begin{sumario}[Introducción]
 Orientarse no es sino obtener información que nos permita dirigir nuestros pasos (o nuestro coche, nuestro barco o nuestra nave espacial) en la dirección adecuada. Desde muy antiguo la humanidad se ha servido de los astros para encontrar esa información, pero el desarrollo de la tecnología (empezando por la invención de la brújula en el siglo IX d.C. en China, hasta los sistemas de posicionamiento global actuales) ha provocado el abandono paulatino de la orientación mediante signos naturales. No obstante, dada la relativa fragilidad de estos sistemas, es posible vernos envueltos en situaciones en las que sea preciso obtener la información suficiente para dirigir nuestro camino basándonos en la información que nos proporcione la propia Naturaleza y, de entre todas las señales que tenemos a nuestra disposición, las más fiables son las que recibimos a través de la observación del cielo.
-\end{abstract}
+\end{sumario}
 
 \section{\textit{Cómo funciona} el firmamento}
 
@@ -65,7 +64,7 @@ De igual manera que la posición de un punto sobre la tierra se identifica por s
  \label{coordenadas}
 \end{figure}
 
-Estos conceptos quedan ilustrados en la figura \ref{coordenadas}. Pero como todo sistema de coordenadas, es necesario definir el origen del sistema. En el caso de las coordenadas geográficas, el origen de la latitud es el ecuador terrestre; el de la longitud es el meridiano que pasa por el Observatorio de Greenwich, en Reino Unido. La latitud es positiva al norte del ecuador y negativa al sur; en cuanto a la longitud, es positiva hacia el este y negativa hacia el oeste.
+Estos conceptos quedan ilustrados en la figura \ref{coordenadas}. Pero como todo sistema de coordenadas, es necesario definir el origen del sistema. En el caso de las coordenadas geográficas, el origen de la latitud es el ecuador terrestre; el de la longitud es el meridiano que pasa por el Observatorio de Greenwich, en Reino Unido. La latitud es positiva al norte del ecuador y negativa al sur; en cuanto a la longitud, es positiva hacia el este y negativa hacia el oeste. Así, las coordenadas de San Fernando son -36.5\textdegree de latitud y -6.2\textdegree de longitud, mientras que las de Sydney, Australia son -33.9\textdegree y 151.2\textdegree de latitud y longitud, respectivamente.
 
 En el caso de las coordenadas celestes ecuatoriales el origen de la declinación se encuentra en el ecuador celeste y el de la ascensión recta en el meridiano celeste que pasa por el denominado \textit{Punto Aries}, cuya definición se omitirá debido a su mayor complejidad. Mientras que la declinación se indica en grados, como en el caso de las coordenadas geográficas, la A.R. se indica en horas. Así, las coordenadas celestes de Mizar (una de las estrellas del carro de la Osa Mayor) son de Dec. = +54\textdegree 55' 31'' y su A.R. = 13 h 23 min 55.5 s. 
 
@@ -75,34 +74,39 @@ En la figura \ref{coordenadas} se identifica un punto del cielo conocido como \t
 
 \subsection{El cielo según la latitud}
 
-
 El movimiento aparente\footnote{Recordemos que el movimiento de los astros que observamos en el firmamento obedece a la rotación de la tierra y no al movimiento real de los mismos} de los objetos celestes es diferente según la latitud del observador. En general, la A.R. de los objetos visibles desde un punto dado de la Tierra es la comprendida 90\textdegree a cada lado del cénit. Como hemos dicho, la declinación del cénit corresponde a la latitud del observador, con lo cual:
 
 \begin{itemize}
- \item Para el horizonte N, basta con restar a 90\textdegree el \textit{valor absoluto} de la latitud: 
+ \item Para el horizonte N, basta con \textbf{restar a 90\textdegree} el \textit{valor absoluto} de la latitud: 
  \[Dec. N = 90 - \abs{\varphi}\]
- \item Para el horizonte S, basta con sumar a -90\textdegree el \textit{valor absoluto} de la latitud:
+ \item Para el horizonte S, basta con \textbf{sumar a -90\textdegree} el \textit{valor absoluto} de la latitud:
  \[Dec. S = -90 + \abs{\varphi}\]
 \end{itemize}
 
 
 Si nos fijamos en la figura \ref{tierra_esfera}, el eje de rotación terrestre atraviesa la tierra y la esfera celeste por los polos. Si estuviéramos situados directamente sobre uno de los polos y pudiéramos visualizar ese eje sobre el terreno, lo veríamos salir del suelo y dirigirse a un punto concreto del cielo: el correspondiente polo celeste. Un observador situado en cualquiera de los dos polos terrestres ($\varphi$=90\textdegree  N o S), si mira hacia su cénit estará contemplando, por tanto, el polo celeste. 
 
-Si nos encontrásemos en el hemisferio norte, tanto el horizonte sur como el norte se encontrarían en el ecuador celeste (ya que 90\textdegree - $\varphi$=0\textdegree) y, por tanto, las estrellas se moverían en círculos directamente encima del  observador y nunca se pondrían. Sólo son visibles los objetos celestes cuyas declinación estén comprendidas entre los 0º y los 90º, es decir, únicamente los situados en el hemisferio norte celeste, durante todas las noches del año\footnote{En el caso extremo de los polos, sólo hay una noche en el año, que dura 6 meses}. En el hemisferio sur ocurriría exatamente lo mismo, pero en este caso sólo veríamos los objetos australes.
+Si nos encontrásemos en el polo norte, tanto el horizonte sur como el norte se encontrarían en el ecuador celeste (horizonte norte, 90\textdegree - $\varphi$=0\textdegree, horizonte sur, -90\textdegree - $\varphi$=0\textdegree) y, por tanto, las estrellas se moverían en círculos directamente encima del  observador y nunca se pondrían. Sólo son visibles los objetos celestes cuya declinación estén comprendidas entre los 0\textdegree y los 90\textdegree, es decir, únicamente los situados en el hemisferio norte celeste, durante todas las noches del año\footnote{En el caso extremo de los polos, sólo hay una noche en el año, que dura 6 meses}. En el polo sur ocurriría exactamente lo mismo, pero en este caso sólo veríamos los objetos australes.
 
 Por el contrario, para un observador situado en el Ecuador ($\varphi$=0\textdegree), en los horizontes N y S se encuentran los respectivos polos celestes (ya que 90\textdegree - 0\textdegree = 90\textdegree y -90\textdegree + 0\textdegree = -90\textdegree) y por tanto el eje de rotación de la tierra atraviesa los horizontes N y S y el ecuador celeste se encuentra en el cénit, por lo que todos los astros salen y se ponen todos los días describiendo arcos por encima del observador con dirección este-oeste. Todos los objetos visibles por la noche en esa época del año son visibles para el observador\footnote{Consúltese la figura \ref{carrera_tierra}}.
 
-En latitudes intermedias el panorama se complica. El polo celeste se encuentra a una altura sobre el horizonte igual a la latitud geográfica del lugar, y los horizontes N y S se encuentran a (90-$\Phi$)\textdegree de latitud N y S respectivamente. Suponiendo un lugar del hemisferio norte, esto tiene tres consecuencias importantes:
+En latitudes intermedias el panorama se complica. El polo celeste se encuentra a una altura sobre el horizonte igual a la latitud geográfica del lugar, el horizonte N y S se corresponden a (90-$\Phi$)\textdegree de declinación N y S respectivamente. Suponiendo un lugar del hemisferio norte, esto tiene tres consecuencias importantes:
 
 \begin{itemize}
- \item Todo objeto celeste situado entre los horizontes N y S saldrá y se pondrá todos los días y su visibilidad nocturna dependerá de la época del año.
- \item Todo objeto celeste situado por debajo del horizonte S no saldrá ni se pondrá nunca.
- \item Todo objeto celeste situado por encima del horizonte N nunca se pondrá y será visible durante todas las noches del año.
+ \item Todo objeto celeste cuya declinación por debajo del horizonte N y por encima del horizonte S, saldrá y se pondrá todos los días y su visibilidad nocturna dependerá de la época del año.
+ \item Todo objeto celeste cuya declinación lo situe por debajo del horizonte S no saldrá ni se pondrá nunca.
+ \item Todo objeto celeste cuya declinación lo situe por encima del horizonte N nunca se pondrá y será visible durante todas las noches del año.
 \end{itemize}
 
-A estos últimos objetos se les denomina \textit{circumpolares}, y son de capital importancia para la orientación mediante las estrellas ya que siempre son visibles sobre el horizonte y, por lo tanto, siempre están disponibles para orientarnos.
+Estos últimos objetos son llamados \textit{circumpolares}, y son de capital importancia para la orientación mediante las estrellas ya que siempre son visibles sobre el horizonte y, por lo tanto, siempre están disponibles para orientarnos.
 
-Por ejemplo, para el caso de Cádiz, cuya $\varphi$=36.5\textdegree, el polo celeste se encuentra al 36,5\textdegree sobre el horizonte, aproximadamente, por lo que los horizontes N y S se encuentran a  90\textdegree - 36.5\textdegree = 53.5\textdegree de latitud N o S. Todas los objetos situados por debajo de la latitud 53.5\textdegree S no serán visibles nunca. Los objetos entre los 53.5\textdegree de latitud S y los 53.5\textdegree de latitud N tendran su orto y ocaso diario, mientras que los comprendidos entre los 53.5\textdegree y 90\textdegree de latitud N serán circumpolares.
+Por ejemplo, para el caso de San Fernando, cuya $\varphi$=36.5\textdegree, el polo norte celeste se encuentra al 36.5\textdegree sobre el horizonte, aproximadamente, por lo que los horizontes N se corresponde a  90\textdegree - 36.5\textdegree = +53.5\textdegree de declinación y el horizonte sur a -90\textdegree + 36.5\textdegree = -53.5\textdegree de declinación.
+
+\begin{itemize}
+ \item La estrella Antares, de la constelación Escorpio, cuya declinación es de -26.5\textdegree aproximadamente. Al encontrarse por debajo del horizonte norte y por encima del horizonte sur, se pone y sale todos los días, pero sólo es visible en ciertas noches del año (verano, principalmente). Igualmente le ocurre a Aldebarán, la estrella más brillante de Tauro, con declinación de +16.5\textdegree aproximadamente.
+ \item La Gran Nube de Magallanes, galaxia cuya declinación es de -69.8\textdegree, puesto que se encuentra por debajo del horizonte sur no saldrá ni se pondrá nunca.
+ \item La estrella más brillante de la constelación Cefeo, Alderamin, tiene una declinación de +62.5\textdegree  aproximadamente. Puesto que está situada por encima del horizonte norte, nunca se pondrá y será visible todas las noches del año.
+\end{itemize}
 
 En el caso del hemisferio sur el fenómeno es idéntico, salvo que los objetos circumpolares los son con respecto al polo celeste sur y los objetos invisibles se encuentran en el hemisferio norte. 
 
